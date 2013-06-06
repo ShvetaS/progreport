@@ -1,0 +1,265 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>10.0.20506</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{9AEAF01D-6F60-42E8-96BF-905B6E878095}</ProjectGuid>
+    <ProjectTypeGuids>{C089C8C0-30E0-4E22-80C0-CE093F111A43};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>CATapp</RootNamespace>
+    <AssemblyName>CATapp</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <SilverlightVersion>$(TargetFrameworkVersion)</SilverlightVersion>
+    <TargetFrameworkProfile>WindowsPhone71</TargetFrameworkProfile>
+    <TargetFrameworkIdentifier>Silverlight</TargetFrameworkIdentifier>
+    <SilverlightApplication>true</SilverlightApplication>
+    <SupportedCultures>
+    </SupportedCultures>
+    <XapOutputs>true</XapOutputs>
+    <GenerateSilverlightManifest>true</GenerateSilverlightManifest>
+    <XapFilename>CATapp.xap</XapFilename>
+    <SilverlightManifestTemplate>Properties\AppManifest.xml</SilverlightManifestTemplate>
+    <SilverlightAppEntry>CATapp.App</SilverlightAppEntry>
+    <ValidateXaml>true</ValidateXaml>
+    <ThrowErrorsInValidation>true</ThrowErrorsInValidation>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>Bin\Debug</OutputPath>
+    <DefineConstants>DEBUG;TRACE;SILVERLIGHT;WINDOWS_PHONE</DefineConstants>
+    <NoStdLib>true</NoStdLib>
+    <NoConfig>true</NoConfig>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>Bin\Release</OutputPath>
+    <DefineConstants>TRACE;SILVERLIGHT;WINDOWS_PHONE</DefineConstants>
+    <NoStdLib>true</NoStdLib>
+    <NoConfig>true</NoConfig>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.Phone" />
+    <Reference Include="Microsoft.Phone.Controls, Version=7.0.0.0, Culture=neutral, PublicKeyToken=24eec0d8c86cda1e" />
+    <Reference Include="Microsoft.Phone.Interop" />
+    <Reference Include="QuickTimer">
+      <HintPath>E:\QuickTimer\QuickTimer\Bin\Debug\QuickTimer.dll</HintPath>
+    </Reference>
+    <Reference Include="system.data.linq" />
+    <Reference Include="System.Windows" />
+    <Reference Include="system" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Net" />
+    <Reference Include="System.Xml" />
+    <Reference Include="mscorlib.extensions" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="App.xaml.cs">
+      <DependentUpon>App.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="CatAppDataClasses.cs" />
+    <Compile Include="datainsertion.xaml.cs">
+      <DependentUpon>datainsertion.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="DBMover.cs" />
+    <Compile Include="MainPage.xaml.cs">
+      <DependentUpon>MainPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="noque.xaml.cs">
+      <DependentUpon>noque.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="noquecat.xaml.cs">
+      <DependentUpon>noquecat.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Opt.xaml.cs">
+      <DependentUpon>Opt.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Page1.xaml.cs">
+      <DependentUpon>Page1.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Page2.xaml.cs">
+      <DependentUpon>Page2.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Page3.xaml.cs">
+      <DependentUpon>Page3.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ApplicationDefinition Include="App.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </ApplicationDefinition>
+    <Page Include="datainsertion.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="MainPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="noque.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="noquecat.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Opt.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Page1.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Page2.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Page3.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\AppManifest.xml" />
+    <None Include="Properties\WMAppManifest.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="ApplicationIcon.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Background.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Resource Include="CAT1994_Q1.PNG" />
+    <Resource Include="CAT1994_Q2-3.PNG" />
+    <Resource Include="CAT1994_A2-3.PNG" />
+    <Resource Include="CAT1994_A48.PNG" />
+    <Resource Include="CAT1994_A49.PNG" />
+    <Resource Include="CAT1994_A6.PNG" />
+    <Resource Include="CAT1994_Q5.PNG" />
+    <Resource Include="CAT1995_A11.PNG" />
+    <Resource Include="CAT1995_Q3.PNG" />
+    <Resource Include="CAT1995_Q4.PNG" />
+    <Resource Include="CAT1996_A8.PNG" />
+    <Resource Include="CAT1996_Q3.PNG" />
+    <Resource Include="CAT1997_Q1-3.PNG" />
+    <Resource Include="CAT1998_Q3.PNG" />
+    <Resource Include="CAT1998_Q7.PNG" />
+    <Resource Include="CAT1999_A11.PNG" />
+    <Resource Include="CAT1999_A14.PNG" />
+    <Resource Include="CAT1999_A16.PNG" />
+    <Resource Include="CAT1999_Q13.PNG" />
+    <Resource Include="CAT1999_Q26-27.PNG" />
+    <Resource Include="CAT1999_Q32-33.PNG" />
+    <Resource Include="CAT1999_Q44-46.PNG" />
+    <Resource Include="CAT1999_Q47-48.PNG" />
+    <Resource Include="CAT2000_A25.PNG" />
+    <Resource Include="CAT2000_A26.PNG" />
+    <Resource Include="CAT2000_A44.PNG" />
+    <Resource Include="CAT2000_A8.PNG" />
+    <Resource Include="CAT2000_Q16.PNG" />
+    <Resource Include="CAT2000_Q2.PNG" />
+    <Resource Include="CAT2000_Q27.PNG" />
+    <Resource Include="CAT2000_Q28.PNG" />
+    <Resource Include="CAT2000_Q29.PNG" />
+    <Resource Include="CAT2000_Q47.PNG" />
+    <Resource Include="CAT2001_A16.PNG" />
+    <Resource Include="CAT2001_A2.PNG" />
+    <Resource Include="CAT2001_A23.PNG" />
+    <Resource Include="CAT2001_A29.PNG" />
+    <Resource Include="CAT2001_A7.PNG" />
+    <Resource Include="CAT2001_Q23.PNG" />
+    <Resource Include="CAT2001_Q34.PNG" />
+    <Resource Include="CAT2001_Q40.PNG" />
+    <Resource Include="CAT2001_Q47.PNG" />
+    <Resource Include="CAT2001_Q49-50.PNG" />
+    <Resource Include="CAT2001_Q8.PNG" />
+    <Resource Include="CAT2002_A24.PNG" />
+    <Resource Include="CAT2002_A32.PNG" />
+    <Resource Include="CAT2002_A34.PNG" />
+    <Resource Include="CAT2002_A4.PNG" />
+    <Resource Include="CAT2002_Q21.PNG" />
+    <Resource Include="CAT2002_Q38-39.PNG" />
+    <Resource Include="CAT2002_Q8.PNG" />
+    <Resource Include="CAT2003R_A21.PNG" />
+    <Resource Include="CAT2003R_A36.PNG" />
+    <Resource Include="CAT2003R_A5.PNG" />
+    <Resource Include="CAT2003R_A6.PNG" />
+    <Resource Include="CAT2003R_A8.PNG" />
+    <Resource Include="CAT2003R_Q13.PNG" />
+    <Resource Include="CAT2003R_Q14.PNG" />
+    <Resource Include="CAT2003R_Q16-18.PNG" />
+    <Resource Include="CAT2003R_Q29-31.PNG" />
+    <Resource Include="CAT2003R_Q35.PNG" />
+    <Resource Include="CAT2003R_Q37.PNG" />
+    <Resource Include="CAT2003R_Q42.PNG" />
+    <Resource Include="CAT2003R_Q45.PNG" />
+    <Resource Include="CAT2003_A11-13.PNG" />
+    <Resource Include="CAT2003_A23.PNG" />
+    <Resource Include="CAT2003_A25.PNG" />
+    <Resource Include="CAT2003_A3-4.PNG" />
+    <Resource Include="CAT2003_A30.PNG" />
+    <Resource Include="CAT2003_A35.PNG" />
+    <Resource Include="CAT2003_A42.PNG" />
+    <Resource Include="CAT2003_Q32.PNG" />
+    <Resource Include="CAT2003_Q33.PNG" />
+    <Resource Include="CAT2003_Q37.PNG" />
+    <Resource Include="CAT2003_Q41.PNG" />
+    <Resource Include="CAT2003_Q42.PNG" />
+    <Resource Include="CAT2003_Q9.PNG" />
+    <Resource Include="CAT2004_A1.PNG" />
+    <Resource Include="CAT2004_Q18-20.PNG" />
+    <Resource Include="CAT2004_Q21.PNG" />
+    <Resource Include="CAT2004_Q22.PNG" />
+    <Resource Include="CAT2004_Q30.PNG" />
+    <Resource Include="CAT2004_Q34.PNG" />
+    <Resource Include="CAT2004_Q35.PNG" />
+    <Resource Include="CAT2005_A17.PNG" />
+    <Resource Include="CAT2005_A21.PNG" />
+    <Resource Include="CAT2005_A24.PNG" />
+    <Resource Include="CAT2005_A3.PNG" />
+    <Resource Include="CAT2005_A4.PNG" />
+    <Resource Include="CAT2005_A9.PNG" />
+    <Resource Include="CAT2005_Q22.PNG" />
+    <Resource Include="CAT2005_Q23.PNG" />
+    <Resource Include="CAT2006_A11-12.PNG" />
+    <Resource Include="CAT2006_A23.PNG" />
+    <Resource Include="CAT2006_A6.PNG" />
+    <Resource Include="CAT2006_A7.PNG" />
+    <Resource Include="CAT2006_Q11-12.PNG" />
+    <Resource Include="CAT2007_Q11-12.PNG" />
+    <Resource Include="CAT2008_A15.PNG" />
+    <Resource Include="CAT2008_A21.PNG" />
+    <Resource Include="CAT2008_A22.PNG" />
+    <Resource Include="CAT2008_A25.PNG" />
+    <Resource Include="CAT2008_A9-10.PNG" />
+    <Resource Include="CAT2008_Q9-10.PNG" />
+    <Content Include="catappdb.sdf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SplashScreenImage.jpg" />
+  </ItemGroup>
+  <Import Project="$(MSBuildExtensionsPath)\Microsoft\Silverlight for Phone\$(TargetFrameworkVersion)\Microsoft.Silverlight.$(TargetFrameworkProfile).Overrides.targets" />
+  <Import Project="$(MSBuildExtensionsPath)\Microsoft\Silverlight for Phone\$(TargetFrameworkVersion)\Microsoft.Silverlight.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+  <ProjectExtensions />
+</Project>

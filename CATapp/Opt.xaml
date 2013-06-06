@@ -1,0 +1,73 @@
+﻿<phone:PhoneApplicationPage 
+    x:Class="CATapp.Opt"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:phone="clr-namespace:Microsoft.Phone.Controls;assembly=Microsoft.Phone"
+    xmlns:shell="clr-namespace:Microsoft.Phone.Shell;assembly=Microsoft.Phone"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    FontFamily="{StaticResource PhoneFontFamilyNormal}"
+    FontSize="{StaticResource PhoneFontSizeNormal}"
+    Foreground="{StaticResource PhoneForegroundBrush}"
+    SupportedOrientations="Portrait" Orientation="Portrait"
+    mc:Ignorable="d" shell:SystemTray.IsVisible="True" d:DesignHeight="768" d:DesignWidth="480">
+
+    <!--LayoutRoot is the root grid where all page content is placed-->
+    <Grid x:Name="LayoutRoot" Background="Transparent" Height="799" Width="513">
+       
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="87"/>
+            <RowDefinition Height="178*"/>
+            <RowDefinition Height="459*" />
+        </Grid.RowDefinitions>
+        <TextBlock Grid.Row="1" Height="76" HorizontalAlignment="Left" Margin="12,11,0,0" Name="txtquesID" Text="{Binding _id}"  VerticalAlignment="Top" Width="419" MaxHeight="{Binding}" FontFamily="Segoe WP Bold" FontWeight="ExtraBold" FontSize="22" TextWrapping="Wrap" Foreground="Chartreuse">
+        </TextBlock>
+        <TextBlock Grid.Row="1" Height="76" HorizontalAlignment="Left" Margin="12,11,0,0" Name="textBlock2" Text="{Binding Header}"  VerticalAlignment="Top" Width="419" MaxHeight="{Binding}" FontFamily="Segoe WP Bold" FontWeight="ExtraBold" FontSize="22" TextWrapping="Wrap" Foreground="Chartreuse">            
+                        </TextBlock>
+                        <TextBlock
+            Text="{Binding Content}"
+            FontSize="20" Margin="12,6,82,14" TextAlignment="Left" TextWrapping="Wrap"
+            VerticalAlignment="Center" Height="158" Grid.Row="2" DataContext="{Binding}" MaxHeight="{Binding}" Foreground="#FF0089FF" />
+                        <!--   <TextBlock
+            Text="{Binding Image_file}"
+            FontSize="20" Margin="12,66,51,266"
+            Grid.Row="3" Width="450"
+            TextAlignment="Left" TextWrapping="Wrap"
+            VerticalAlignment="Center" Height="127" MaxWidth="{Binding}" TextTrimming="None" MaxHeight="{Binding}" />-->
+                        <Image Height="142" Margin="220,140,82,0" Name="image1" Stretch="Fill" VerticalAlignment="Top" Source="{Binding Image_file}" Grid.Row="2" Grid.RowSpan="2" />
+
+                        <ListBox x:Name="optListBox" Width="450" ItemsSource="{Binding Options}" Margin="6,0,57,128" Grid.Row="2" SelectionChanged="optListBox_SelectionChanged" MaxWidth="{Binding}" MinHeight="{Binding}" Height="357" VerticalAlignment="Bottom" Grid.RowSpan="2">
+                            <ListBox.ItemTemplate>
+                                <DataTemplate>
+                                    <!--<Grid HorizontalAlignment="Stretch" Width="300">
+                                        <Grid.ColumnDefinitions>
+                                            <ColumnDefinition Width="300" />
+                                            <ColumnDefinition Width="*" />
+                                            <ColumnDefinition Width="400" />
+                                        </Grid.ColumnDefinitions>-->
+                                        <RadioButton Content="{Binding Content}" Height="70" Width="400" HorizontalAlignment="Left" Margin="0,0,0,0" Name="rbopt" VerticalAlignment="Top" IsChecked="False"
+                                 FontSize="20"  Tag="{Binding Correct}" Click="radioButton1_Click_1" IsHitTestVisible="True" />
+
+
+                                   <!-- </Grid>-->
+                                </DataTemplate>
+                            </ListBox.ItemTemplate>
+                        </ListBox>
+        <TextBlock Grid.Row="3" Height="225" HorizontalAlignment="Left" Margin="71,28,0,0" Name="txtoptid"   VerticalAlignment="Top" Width="257" />
+    </Grid>
+  
+ 
+    <!--Sample code showing usage of ApplicationBar-->
+    <!--<phone:PhoneApplicationPage.ApplicationBar>
+        <shell:ApplicationBar IsVisible="True" IsMenuEnabled="True">
+            <shell:ApplicationBarIconButton IconUri="/Images/appbar_button1.png" Text="Button 1"/>
+            <shell:ApplicationBarIconButton IconUri="/Images/appbar_button2.png" Text="Button 2"/>
+            <shell:ApplicationBar.MenuItems>
+                <shell:ApplicationBarMenuItem Text="MenuItem 1"/>
+                <shell:ApplicationBarMenuItem Text="MenuItem 2"/>
+            </shell:ApplicationBar.MenuItems>
+        </shell:ApplicationBar>
+    </phone:PhoneApplicationPage.ApplicationBar>-->
+
+</phone:PhoneApplicationPage>
